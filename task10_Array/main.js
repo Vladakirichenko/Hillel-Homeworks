@@ -9,10 +9,7 @@ for(let i = 0; i < arrLength; i++) {
     arr.push(arrInfo)
 }
 
-arr.sort((num1, num2) => {
-    if (num1 > num2) return 1;
-    if (num1 < num2) return -1;
-    return 0;
-}).splice(2, 4)
+arr.sort((num1, num2) => num1 - num2)
+   .splice(2, 3)
 
 alert(arr.join(', '))

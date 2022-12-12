@@ -16,8 +16,8 @@ if(num1 === num2) {
 const distKm = parseInt(prompt('km'))
 const distFut = parseInt(prompt('fut'))
 
-metrInkm = distKm * 1000
-distFutINkm = distFut * 0.305
+const metrInkm = distKm * 1000
+const distFutINkm = distFut * 0.305
 
 if (metrInkm > distFutINkm) {
     alert(`${distKm} km is bigger`)
@@ -27,19 +27,19 @@ if (metrInkm > distFutINkm) {
 
 // Task 3
 
-const a = parseInt(prompt('Input num1'))
-const b = parseInt(prompt('Input num2'))
+const divNum1 = parseInt(prompt('Input num1'))
+const divNum2 = parseInt(prompt('Input num2'))
 
-if (a % b === 0) {
-    alert(`${a} is a divisor of ${b}`)
+if (divNum1 % divNum2 === 0) {
+    alert(`${divNum1} is a divisor of ${divNum2}`)
 } else {
-    alert(`${a} is not a divisor of ${b}`)
+    alert(`${divNum1} is not a divisor of ${divNum2}`)
 }
 
-if (b % a === 0) {
-    alert(`${b} is a divisor of ${a}`)
+if (divNum2 % divNum1 === 0) {
+    alert(`${divNum2} is a divisor of ${divNum1}`)
 } else {
-    alert(`${b} is not a divisor of ${a}`)
+    alert(`${divNum2} is not a divisor of ${divNum1}`)
 }
 
 // Task 4
@@ -74,8 +74,8 @@ console.log(sum / 500);
 let result = 15
 for (let d = 16; d <= 35; d++) {
     result *= d
-    console.log(result);
 }
+console.log(result);
 
 // Task 9
 

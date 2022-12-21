@@ -56,8 +56,8 @@ let users = [
     ]
 
     let sumBalance = 0;
-    users.map((item) => {
-        let balanceWithoutSign = item.balance.replaceAll(',', '').replaceAll('$', '')
+    users.forEach((item) => {
+        let balanceWithoutSign = +item.balance.replaceAll(',', '').replaceAll('$', '')
         if(balanceWithoutSign > 2000) {
             console.log(item.phone);
         }

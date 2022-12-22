@@ -38,8 +38,6 @@ const getProdNum = (prodLength) => {
     return prodNum;
 }
 
-const valueProdNum = getProdNum (products)
-
 const getProdCount = (prodNum) => {
     let prodCount;
     if (typeof prodNum === 'number') {
@@ -66,5 +64,6 @@ const getProdCount = (prodNum) => {
     }
 }
 
+const valueProdNum = getProdNum (products)
 showProducts(products)
 getProdCount(valueProdNum)

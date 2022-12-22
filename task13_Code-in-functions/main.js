@@ -7,27 +7,25 @@ const products = [
     {name: 'Pear', price: 30}
 ];
 
+const GRN_PER_DOLLAR = 41;
+const DISCOUNT_START_FROM = 10000;
+const DISCOUNT = 20;
+
 const showProducts = (objProd) => {
     for (let prodId = 0; prodId < objProd.length; prodId++) {
         console.log(`${prodId + 1} ${objProd[prodId].name} ${objProd[prodId].price}`);
     }
 }
 
-showProducts(products)
-
-const GRN_PER_DOLLAR = 41;
-const DISCOUNT_START_FROM = 10000;
-const DISCOUNT = 20;
-
-const discountCounter = (totalProdPrice, grnPerDol, priceStartFrom, discount) => {
-    if (totalProdPrice * grnPerDol > priceStartFrom) {
-        console.log(`Congrats, you get a discount ${discount}%`);
-        console.log(`Your total price is: ${totalProdPrice * (100 - discount) / 100}`);
+const discountCounter = (totalProdPrice) => {
+    if (totalProdPrice * GRN_PER_DOLLAR > DISCOUNT_START_FROM) {
+        console.log(`Congrats, you get a discount ${DISCOUNT}%`);
+        console.log(`Your total price is: ${totalProdPrice * (100 - DISCOUNT) / 100}`);
     }
 }
 
-let prodNum;
-const getProdNum = () => {
+const getProdNum = (prodLength) => {
+    let prodNum;
     do {
         prodNum = prompt('Write product number:');
 
@@ -35,20 +33,19 @@ const getProdNum = () => {
             break;
         }
         prodNum--;
-    } while (prodNum < 0 || prodNum > products.length - 1 || isNaN(prodNum));
+    } while (prodNum < 0 || prodNum > prodLength.length - 1 || isNaN(prodNum));
 
     return prodNum;
 }
 
-getProdNum ()
+const valueProdNum = getProdNum (products)
 
 const getProdCount = (prodNum) => {
+    let prodCount;
     if (typeof prodNum === 'number') {
         const product = products[prodNum];
 
         console.log(product);
-
-        let prodCount;
 
         do {
             prodCount = prompt('Write product count:');
@@ -64,9 +61,10 @@ const getProdCount = (prodNum) => {
 
             console.log(`Total price: $${totalProdPrice}`);
 
-            discountCounter(totalProdPrice, GRN_PER_DOLLAR, DISCOUNT_START_FROM, DISCOUNT)
+            discountCounter(totalProdPrice)
         }
     }
 }
 
-getProdCount(prodNum)
+showProducts(products)
+getProdCount(valueProdNum)

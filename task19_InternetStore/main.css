@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.category-item {
+    padding: 20px;
+    flex-grow: 1;
+    width: 200px;
+    border: 1px solid;
+    scroll-behavior: auto;
+    background-color: rgb(187, 193, 255);
+    
+}
+
+.window {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    display: none;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
+
+.window.active {
+    display: flex;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(77, 77, 226);
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(18, 18, 108);
+    transition: all 0.5s ease;
+}

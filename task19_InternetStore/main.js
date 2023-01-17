@@ -43,11 +43,29 @@ const showDiteiles = (event) => {
 }
 
 const buyProduct = () => {
-    const window = document.getElementsByClassName('window')[0]
-    window.classList.add('active')
-    setTimeout(() => {
-        location.reload()
-    }, 2000)
+    const form = document.getElementsByClassName('form')[0]
+    form.classList.add('active')
 }
 
 showCategory()
+
+const infoArea = document.getElementsByClassName('info-area')[0];
+const btnBay = document.getElementById('btn-bay')
+
+btnBay.addEventListener('click', (e) => {
+    const NameValue = document.forms.form[0].value 
+    const cityValue = document.forms.form[1].value
+    const poshtaValue = document.forms.form[2].value
+    const payValueElems = document.querySelectorAll('.radio')
+    const quantityValue = document.forms.form[5].value
+    const commetnValue = document.forms.form[6].value
+    e.preventDefault()
+    let payValue;
+    payValueElems.forEach(item => {
+        if (item.checked) {
+            payValue = item.value;
+        } 
+    })
+    infoArea.innerHTML = `Your name: ${NameValue} <br> Your city: ${cityValue} <br> Post office:  ${poshtaValue} <br> Pay by: ${payValue} <br> Quantity of products: ${quantityValue} <br> Comment: ${commetnValue}`
+    form.classList.remove('active')
+})

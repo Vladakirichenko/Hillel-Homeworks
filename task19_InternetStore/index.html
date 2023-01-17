@@ -13,7 +13,29 @@
         <div class="category-item products"></div>
         <div class="category-item detailes"></div>
     </div>
-    <div class="window">Товар куплений</div>
+    <form class="form" id="form" action="#" name="form">
+        <input type="text" class="input-name" placeholder="Name" name="name">
+        <select name="city" id="city" class="city">
+            <option value="0">Choose city</option>
+            <option value="Kiev">Kiev</option>
+            <option value="Lviv">Lviv</option>
+            <option value="Kharkiv">Kharkiv</option>
+        </select>
+        <select name="poshta" id="poshta" class="poshta">
+            <option value="0">Choose # Nova Poshta</option>
+            <option value="#1">#1</option>
+            <option value="#2">#2</option>
+            <option value="#3">#3</option>
+        </select>
+        <p class="input-kard radio-p"><input class="radio" type="radio" name="pay" value="kard"> Kard</p>
+        <p class="input-cash radio-p" ><input class="radio" type="radio" name="pay" value="cash"> Cash</p>
+        <label for="number">Quantity of product: </label>
+        <input type="number" name="number">
+        <label for="input-comment">Comment:</label>
+        <textarea name="comment" id="comment" cols="30" rows="10" style="height: 50px;"></textarea>
+        <button class="btn-bay" id="btn-bay" >Bay product</button>
+    </form>
+    <div class="info-area"></div>
     <script src="data.js"></script>
     <script src="main.js"></script>
 </body>

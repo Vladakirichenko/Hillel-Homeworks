@@ -15,18 +15,25 @@
     
 }
 
-.window {
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 200px;
+.form {
     display: none;
-    border-radius: 10px;
-    background-color: aquamarine;
+    flex-direction: column;
+    max-width: 200px;
+    border: 1px solid;
+    padding: 20px;
 }
 
-.window.active {
+.radio-p {
+    font-size: 15px;
+}
+
+.input-kard {
+    margin-top: 10px;
+    margin-bottom: -15px;
+
+}
+
+.form.active {
     display: flex;
 }
 

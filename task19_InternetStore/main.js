@@ -1,3 +1,6 @@
+const infoArea = document.getElementsByClassName('info-area')[0];
+const btnBay = document.getElementById('btn-bay')
+
 const showCategory = () => {
     const categoriesElem = document.querySelector('.categories')
     DATA.forEach((item, id) => {
@@ -48,9 +51,6 @@ const buyProduct = () => {
 }
 
 showCategory()
-
-const infoArea = document.getElementsByClassName('info-area')[0];
-const btnBay = document.getElementById('btn-bay')
 
 btnBay.addEventListener('click', (e) => {
     const NameValue = document.forms.form[0].value 

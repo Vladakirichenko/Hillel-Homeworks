@@ -1,0 +1,16 @@
+body {
+    background: #0a0113;
+}
+
+* {
+    color: #fff;
+}
+
+#Update {
+    display: none;
+}
+
+input {
+    color: black;
+}
+
